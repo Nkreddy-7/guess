@@ -1,0 +1,66 @@
+.level{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    
+    margin-top: 350px;
+
+    
+}
+.levels{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    margin-top: 250px;
+}
+.level-name{
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(42, 165, 128);
+}
+
+
+
+/*Easy level*/
+
+#Easylevel{
+    display: none;
+}
+.select-img{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:15px
+    
+}
+.select-img img{
+    height: 400px;
+    width: 400px;
+    border-radius: 30px;
+}
+.game-img.active{
+    display: block;
+}
+.game-img.hidden {
+    display: none;
+}
+.selected-image{
+    display: none;
+}
+
+
+/*Medium level*/
+#Mediumlevel {
+    display: none;
+}
+
+/*Hard level*/
+#Hardlevel {
+    display: none;
+}
