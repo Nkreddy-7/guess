@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Document</title>
     <link rel="stylesheet" href="game.css">
 
@@ -25,12 +26,8 @@
     </section>
 
     <section id="Easylevel">
-        <div class="top-bar">
-            <button id="home-E">🏠 Home</button>
-            <div class="coins">
-                <p>💰 Coins: <span id="coinBox">0</span></p>
-            </div>
-        </div>
+                <button id="backSelect-E" style="display:none;">⬅ Back</button>
+        
         <div class="head-easy" id="head-Easy">
             <div class="nav">
             <h2>Easy Section</h2>
@@ -42,19 +39,15 @@
        
         <div class="all-images" id="all-images">
         </div>
-        <button id="backSelect-E">⬅ Back</button>
-        <button id="EnextQ">Next</button>
+
+      
     </section>
     <section id="Mediumlevel">
-        <div class="top-bar">
-            <button id="home-M">🏠 Home</button>
-            <div class="coins">
-                <p>💰 Coins: <span id="coinBox-M">0</span></p>
-            </div>
-        </div>
+                <button id="backSelect-M" style="display:none;">⬅ Back</button>
+        
         <div class="head-easy" id="head-Easy-M">
             <h2>Mediem Section</h2>
-            <p>Welcome to Medium level</p>
+            <p>Select one image to play</p>
 
             <div class="select-img" id="image-container-m">
             </div>
@@ -62,30 +55,29 @@
       
         <div class="all-images-M" id="all-images-M">
         </div>
-        <button id="backSelect-M">⬅ Back</button>
-        <button id="MnextQ">Next</button>
+
+        
     </section>
     <section id="Hardlevel">
-        <div class="top-bar">
-            <button id="home-H">🏠 Home</button>
-            <div class="coins">
-                <p>💰 Coins: <span id="coinBox-H">0</span></p>
-            </div>
-        </div>
+                <button id="backSelect-H" style="display:none;">⬅ Back</button>
+       
         <div class="head-easy" id="head-Easy-H">
         <h2>Hard Section</h2>
-        <p>Welcome to Hard level</p>
+        <p>Select one image to play</p>
         <div class="select-img" id="image-container-h">
         </div>
         </div>
 
         <div class="all-images-H" id="all-images-H">
         </div>
-        <button id="backSelect-H">⬅ Back</button>
-        <button id="HnextQ">Next</button>
+
+        
 
 
     </section>
+    <audio id="audio" controls autoplay>
+        <source src="play.mp3" type="audio/mpeg" loop>
+    </audio>
     
 
     <script type="module" src="game.js"></script>

@@ -4,6 +4,8 @@ const Eimg = [
   { img: "Easyimg/2" },
   { img: "Easyimg/3" },
   { img: "Easyimg/4" },
+  { img: "Easyimg/5" },
+  
 ];
 
 export let Easyimghtml='';
@@ -88,6 +90,238 @@ export const Eimg1 = [
     },
   },
 ];
+export const Eimg2 = [
+  {
+    Q: "What color is the girl's dress?",
+    option: {
+      op1: "Blue",
+      op2: "Yellow",
+      op3: "Red",
+      class1: "w2",
+      class2: "c1",
+      class3: "w3",
+    },
+  },
+  {
+    Q: "Which insect is flying near the girl?",
+    option: {
+      op1: "Bee",
+      op2: "Ant",
+      op3: "Spider",
+      class1: "c1",
+      class2: "w2",
+      class3: "w3",
+    },
+  },
+  {
+    Q: "What is shining in the sky?",
+    option: {
+      op1: "Moon",
+      op2: "Sun",
+      op3: "Star",
+      class1: "w2",
+      class2: "c1",
+      class3: "w3",
+    },
+  },
+  {
+    Q: "What color are the birds near the girl?",
+    option: {
+      op1: "Blue and White",
+      op2: "Green and Yellow",
+      op3: "Red and Black",
+      class1: "c1",
+      class2: "w2",
+      class3: "w3",
+    },
+  },
+  {
+    Q: "Where is the girl standing?",
+    option: {
+      op1: "road",
+      op2: "garden",
+      op3: "classroom",
+      class1: "w2",
+      class2: "c1",
+      class3: "w3",
+    },
+  },
+];
+export const Eimg3 = [
+  {
+    Q: "What is the father playing with?",
+    option: {
+      op1: "Ball",
+      op2: "Kite",
+      op3: "Frisbee",
+      class1: "c1",
+      class2: "w2",
+      class3: "w3",
+    },
+  },
+  {
+    Q: "What is the mother holding?",
+    option: {
+      op1: "book",
+      op2: "basket",
+      op3: "balloon",
+      class1: "c1",
+      class2: "w2",
+      class3: "w3",
+    },
+  },
+  {
+    Q: "What is on the picnic mat?",
+    option: {
+      op1: "Food",
+      op2: "Toys",
+      op3: "Shoes",
+      class1: "c1",
+      class2: "w2",
+      class3: "w3",
+    },
+  },
+  {
+    Q: "How many children are playing?",
+    option: {
+      op1: "2",
+      op2: "3",
+      op3: "1",
+      class1: "c1",
+      class2: "w2",
+      class3: "w3",
+    },
+  },
+  {
+    Q: "Where is the picnic happening?",
+    option: {
+      op1: "In a forest",
+      op2: "In a park",
+      op3: "On a beach",
+      class1: "w2",
+      class2: "c1",
+      class3: "w3",
+    },
+  },
+];
+export const Eimg4 = [
+  {
+    Q: "What is the boy holding?",
+    option: {
+      op1: "Fishing rod",
+      op2: "Stick",
+      op3: "Book",
+      class1: "c1",
+      class2: "w2",
+      class3: "w3",
+    },
+  },
+  {
+    Q: "Which animal is sitting on a rock?",
+    option: {
+      op1: "Frog",
+      op2: "Duck",
+      op3: "Dog",
+      class1: "c1",
+      class2: "w2",
+      class3: "w3",
+    },
+  },
+  {
+    Q: "What is floating on the water?",
+    option: {
+      op1: "Lotus",
+      op2: "wire",
+      op3: "Paper boats",
+      class1: "c1",
+      class2: "w2",
+      class3: "w3",
+    },
+  },
+  {
+    Q: "What birds are swimming in the water?",
+    option: {
+      op1: "Duck",
+      op2: "Swan",
+      op3: "Pigeons",
+      class1: "c1",
+      class2: "w2",
+      class3: "w3",
+    },
+  },
+  {
+    Q: "What color is the boy's hat?",
+    option: {
+      op1: "Red",
+      op2: "Green",
+      op3: "Blue",
+      class1: "w2",
+      class2: "c1",
+      class3: "w3",
+    },
+  },
+];
+export const Eimg5 = [
+  {
+    Q: "What is coming out of the volcano?",
+    option: {
+      op1: "Snow",
+      op2: "Lava",
+      op3: "Water",
+      class1: "w2",
+      class2: "c1",
+      class3: "w3",
+    },
+  },
+  {
+    Q: "What animals are in the picture?",
+    option: {
+      op1: "Dinosaurs",
+      op2: "Lions",
+      op3: "Elephants",
+      class1: "c1",
+      class2: "w2",
+      class3: "w3",
+    },
+  },
+  {
+    Q: "What color is the biggest dinosaur?",
+    option: {
+      op1: "Blue",
+      op2: "Yellow",
+      op3: "Green",
+      class1: "w3",
+      class2: "w2",
+      class3: "c1",
+    },
+  },
+  {
+    Q: "Where are the dinosaurs standing?",
+    option: {
+      op1: "park",
+      op2: "forest",
+      op3: "Zoo",
+      class1: "w2",
+      class2: "c1",
+      class3: "w3",
+    },
+  },
+  {
+    Q: "How many dinosaurs are there?",
+    option: {
+      op1: "5",
+      op2: "4",
+      op3: "7",
+      class1: "w1",
+      class2: "w2",
+      class3: "c1",
+    },
+  },
+];
+
+
+
+
 /*Eimg1.forEach((i1q)=>{
   Eq1html += `<div class="question-1">
                     <p>${i1q.Q}</p>
@@ -99,7 +333,8 @@ export const Eimg1 = [
                     <div class="result">result</div>
                 </div>`;
 } );
-*/
+*//*
+
 export const Eimg2 = [
   {
     Q: "How many balloons are in the picture?",
@@ -273,7 +508,7 @@ export const Eimg4 = [
     },
   },
 ];
-
+*/
 /*
 export function EasyQhtml(Qdata) {
   let html = "";

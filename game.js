@@ -170,16 +170,137 @@ document.getElementById("all-images-H").innerHTML = selectedHardhtml;
 /*Questions html*/
 
 
+// Global coins variable
+let coins = 0;
+
+// Update all coin boxes (Easy, Medium, Hard)
+function updateCoins() {
+  document
+    .querySelectorAll("#coinBox, #coinBox-M, #coinBox-H")
+    .forEach((el) => {
+      if (el) el.textContent = coins;
+    });
+}
+
+// Quiz function
+export function getNextQ(imagedata, containerId) {
+  let currentIndex = 0;
+  let score = 0;
+
+  const container = document.getElementById(containerId);
+
+  function showQuestion(index) {
+    const q = imagedata[index];
+    container.innerHTML = `
+      <div class="question-1">
+        <p>${q.Q}</p>
+        <div class="options">
+          <div class="option ${q.option.class1}" data-correct="${q.option.class1.startsWith("c")}">${q.option.op1}</div>
+          <div class="option ${q.option.class2}" data-correct="${q.option.class2.startsWith("c")}">${q.option.op2}</div>
+          <div class="option ${q.option.class3}" data-correct="${q.option.class3.startsWith("c")}">${q.option.op3}</div>
+        </div>
+        <div class="result">Choose an answer</div>
+      </div>
+    `;
+     
+  const parentSection = container.closest("section");
+  if (parentSection) {
+    const backBtn = parentSection.querySelector("button[id^='backSelect']");
+    if (backBtn) backBtn.style.display = "inline-block";
+  }
+
+    const options = container.querySelectorAll(".option");
+    const result = container.querySelector(".result");
+
+    options.forEach((opt) => {
+      opt.addEventListener("click", () => {
+        const isCorrect = opt.dataset.correct === "true";
+
+        if (isCorrect) {
+          opt.style.background = "lightgreen";
+          result.textContent = "✅ Correct!";
+          score++;
+          coins++;
+          updateCoins();
+
+          setTimeout(() => {
+            nextQuestion(); // auto move to next
+          }, 1000);
+        } else {
+          opt.style.background = "lightcoral";
+          result.textContent = "❌ Wrong, try again!";
+          coins--;
+          updateCoins();
+        }
+      });
+    });
+  }
+
+  function nextQuestion() {
+    currentIndex++;
+    if (currentIndex < imagedata.length) {
+      showQuestion(currentIndex);
+    } else {
+      container.innerHTML = `<p class="final-score">🎉 Quiz finished!<br> Score: ${score}/${imagedata.length}<br>💰 Coins: ${coins}</p>`;
+    }
+
+  }
+
+  // Start first question
+  showQuestion(currentIndex);
+}
+
+// Calls (no next buttons needed)
+getNextQ(Eimg1, "img1Q");
+getNextQ(Eimg2, "img2Q");
+getNextQ(Eimg3, "img3Q");
+getNextQ(Eimg4, "img4Q");
+
+getNextQ(Mimg1, "img1Q-m");
+getNextQ(Mimg2, "img2Q-m");
+getNextQ(Mimg3, "img3Q-m");
+getNextQ(Mimg4, "img4Q-m");
+
+getNextQ(Himg1, "img1Q-h");
+getNextQ(Himg2, "img2Q-h");
+getNextQ(Himg3, "img3Q-h");
+getNextQ(Himg4, "img4Q-h");
+
+// Setup back button logic
+function setupBackButton(backId, headId) {
+  const backBtn = document.getElementById(backId);
+  backBtn.style.display = "none"; // hide at start
+
+  backBtn.addEventListener("click", () => {
+    // hide all selected-image (question containers)
+    document.querySelectorAll(`#${headId} ~ .selected-image`).forEach((el) => {
+      el.style.display = "none";
+    });
+
+    // show the image header again
+    document.getElementById(headId).style.display = "block";
+
+    // hide back button again
+    backBtn.style.display = "none";
+  });
+}
+
+// apply to all levels
+setupBackButton("backSelect-E", "head-Easy");
+setupBackButton("backSelect-M", "head-Easy-M");
+setupBackButton("backSelect-H", "head-Easy-H");
 
 
-/*function for Each image Questions and option generation*/
+
+
+/*function for Each image Questions and option generation
 console.log("naveeen")
 export function getNextQ(imagedata, containerId, btnId) {
   let currentIndex = 0;
   let score = 0;
   const btn = document.getElementById(btnId);
   const container = document.getElementById(containerId);
-   btn.style.display ="none";
+   
   function showQuestion(index) {
     const q = imagedata[index];
     container.innerHTML = `
@@ -213,21 +334,20 @@ export function getNextQ(imagedata, containerId, btnId) {
           opt.style.background = "lightgreen";
           result.textContent = "✅ Correct!";
           score++;
-          coins++;
-           updateCoins();
+          
           setTimeout(() => {
-            
+          
           }, 1000); // auto move after 1 sec
         } else {
           opt.style.background = "lightcoral";
           result.textContent = "❌ Wrong, try again!";
-          coins--;
-           updateCoins();
+          
         }
       });
     });
   }
- /*console.log(coins)
+  console.log("naveem")
+ console.log(coins)
   function nextQuestion() {
     currentIndex++;
     if (currentIndex < imagedata.length) {
@@ -259,9 +379,9 @@ getNextQ(Mimg4, "img4Q-m", "MnextQ");
 getNextQ(Himg1, "img1Q-h", "HnextQ");
 getNextQ(Himg2, "img2Q-h", "HnextQ");
 getNextQ(Himg3, "img3Q-h", "HnextQ");
-getNextQ(Himg4, "img4Q-h", "HnextQ");
+getNextQ(Himg4, "img4Q-h", "HnextQ");*/
 
-
+/*
  let coins =0;
 function updateCoins() {
   document
@@ -269,7 +389,7 @@ function updateCoins() {
     .forEach((el) => {
       if (el) el.textContent = coins;
     });
-}
+}/*
 /*
 function setupHomeButton(homeId) {
   const homeBtn = document.getElementById(homeId);
