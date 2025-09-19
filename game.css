@@ -1,29 +1,32 @@
+
+/*upto here*/
 .level{
     display: flex;
     gap: 100px;
     justify-content: center;
+    align-items: center;
+   
+   height: 680px;
     
-    margin-top: 350px;
 
     
 }
-.levels{
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-    margin-top: 250px;
-}
+
 .level-name{
-    border: 2px solid black;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+   
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(42, 165, 128);
+    background: #033921;
+        background: -webkit-linear-gradient(177deg, #11402b 0%, #044327 100%);
+        background: linear-gradient(177deg, #15603e 0%, #0e5c39 100%);
+    color: white;
+    font-size: 30px;
+    box-shadow: 1px 20px 30px 20px#11402b;
+    
 }
 
 
@@ -32,6 +35,27 @@
 
 #Easylevel{
     display: none;
+}
+
+.head-easy h2{
+    
+    width: fit-content;
+    padding: 5px;
+    background-color: #007540;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+.head-easy p{
+    font-family: sans-serif;
+
+}
+
+.coins{
+    position:fixed;
+    right: 50px;
+    top: 0;
 }
 .select-img{
     display: grid;
@@ -54,6 +78,47 @@
     display: none;
 }
 
+
+.all-imgs{
+    display: flex;
+    justify-content: space-evenly;
+}
+.all-imgs img{
+    height: 530px;
+    border-radius: 10px;
+    
+}
+.all-imgs h5{
+  font-size: 35px;
+}
+.question-1 p{
+    font-size: 25px;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.option{
+    border: 2px solid black;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    gap: 15px;
+}
+.result{
+    margin-top: 40px;
+}
+#Mnext{
+    display: none;
+}
+#Hnext{
+    display: none;
+}
 
 /*Medium level*/
 #Mediumlevel {

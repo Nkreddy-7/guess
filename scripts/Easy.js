@@ -15,12 +15,16 @@ Eimg.forEach((ele,index)=>{
 export let selectedhtml = '';
 Eimg.forEach((ele,index) =>{
       selectedhtml += `<div class="selected-image" id="image-${index + 1}-data">
-                <img src="${ele.img}.jpg" id=" i${index + 1}">
+               <div class="all-imgs">
+                <div><img src="${ele.img}.jpg" id=" i${index + 1}"></div>
+                <div>
                 <h5>Questions</h5>
                 <div class="Questions">
                     <div class="question-1" id="img${index + 1}Q">
                     </div>
-                    <div class="final-score">score</div>
+                    <div class="final-score"></div>
+                </div>
+                </div>
                 </div>
             </div>`;
 })
@@ -270,7 +274,7 @@ export const Eimg4 = [
   },
 ];
 
-
+/*
 export function EasyQhtml(Qdata) {
   let html = "";
   Qdata.forEach((i1q) => {
@@ -285,14 +289,14 @@ export function EasyQhtml(Qdata) {
                 </div>`;
   });
   return html;
-}
+}*/
 /*Questions html*/
-
+/*
 export let Eq1html = EasyQhtml(Eimg1);
 export let Eq2html = EasyQhtml(Eimg2);
 export let Eq3html = EasyQhtml(Eimg3);
 export let Eq4html = EasyQhtml(Eimg4);
-
+*/
 /*questions visibility one by one*/
 
 /*
