@@ -18,18 +18,20 @@ Himg.forEach((hi,index) => {
 export let selectedHardhtml = '';
 Himg.forEach((ele,index) =>{
       selectedHardhtml += `<div class="selected-image" id="image-${index + 1}-data-Hard">
-                 <div class="all-imgs">
-                <div><img src="${ele.img}.jpg" id=" i${index + 1}"></div>
-                <div>
+    <div class="all-imgs">
+        <div><img src="${ele.img}.jpg" id=" i${index + 1}"></div>
+        <div class="Q-data-head">
+            <div class="Q-head">
                 <h5>Questions</h5>
                 <div class="Questions">
                     <div class="question-1" id="img${index + 1}Q-h">
                     </div>
                     <div class="final-score"></div>
                 </div>
-                </div>
-                </div>
-            </div>`;
+            </div>
+        </div>
+    </div>
+</div>`;
 });
 
 export const Himg1 = [

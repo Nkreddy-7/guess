@@ -1,9 +1,10 @@
-import { Easyimghtml,selectedhtml, Eimg1,Eimg2,Eimg3,Eimg4} from "./scripts/Easy.js";
+import { Easyimghtml,selectedhtml, Eimg1,Eimg2,Eimg3,Eimg4,Eimg5} from "./scripts/Easy.js";
 
-import {Mediumimghtml,selectedMediumhtml,Mimg1,Mimg2,Mimg3,Mimg4,} from "./scripts/Medium.js";
-import { Hardimghtml,selectedHardhtml,Himg1,Himg2,Himg3,Himg4 } from "./scripts/Hard.js";
+import {Mediumimghtml,selectedMediumhtml,Mimg1,Mimg2,Mimg3,Mimg4,Mimg5,Mimg6,Mimg7,Mimg8,Mimg9,Mimg10,Mimg11} from "./scripts/Medium.js";
+import { Hardimghtml,selectedHardhtml,Himg1,Himg2,Himg3,Himg4,Himg5,Himg6,Himg7,Himg8,Himg9 } from "./scripts/Hard.js";
 
 console.log(Eimg1)
+console.log(Mediumimghtml)
 
 /*calling sections*/
 const Easy = document.getElementById("Eclick");
@@ -77,6 +78,7 @@ const img1details = document.getElementById("imag-0");
 const img2details = document.getElementById("imag-1");
 const img3details = document.getElementById("imag-2");
 const img4details = document.getElementById("imag-3");
+const img5details = document.getElementById("imag-4");
 
 img1details.addEventListener("click",()=>{
     document.getElementById("head-Easy").style.display = "none";
@@ -98,6 +100,10 @@ img4details.addEventListener("click", () => {
   document.getElementById("head-Easy").style.display = "none";
   document.getElementById("image-4-data").style.display = "block";
 });
+img5details.addEventListener("click", () => {
+  document.getElementById("head-Easy").style.display = "none";
+  document.getElementById("image-5-data").style.display = "block";
+});
 
 /*Selected img html*/
 document.getElementById("all-images").innerHTML=selectedhtml;
@@ -108,6 +114,14 @@ const Mimg1details = document.getElementById("imag-0-M");
 const Mimg2details = document.getElementById("imag-1-M");
 const Mimg3details = document.getElementById("imag-2-M");
 const Mimg4details = document.getElementById("imag-3-M");
+const Mimg5details = document.getElementById("imag-4-M");
+const Mimg6details = document.getElementById("imag-5-M");
+const Mimg7details = document.getElementById("imag-6-M");
+const Mimg8details = document.getElementById("imag-7-M");
+const Mimg9details = document.getElementById("imag-8-M");
+const Mimg10details = document.getElementById("imag-9-M");
+const Mimg11details = document.getElementById("imag-10-M");
+
 
 Mimg1details.addEventListener("click", () => {
   document.getElementById("head-Easy-M").style.display = "none";
@@ -129,6 +143,35 @@ Mimg4details.addEventListener("click", () => {
   document.getElementById("image-4-data-Medium").style.display = "block";
 });
 
+Mimg5details.addEventListener("click", () => {
+  document.getElementById("head-Easy-M").style.display = "none";
+  document.getElementById("image-5-data-Medium").style.display = "block";
+});
+Mimg6details.addEventListener("click", () => {
+  document.getElementById("head-Easy-M").style.display = "none";
+  document.getElementById("image-6-data-Medium").style.display = "block";
+});
+Mimg7details.addEventListener("click", () => {
+  document.getElementById("head-Easy-M").style.display = "none";
+  document.getElementById("image-7-data-Medium").style.display = "block";
+});
+Mimg8details.addEventListener("click", () => {
+  document.getElementById("head-Easy-M").style.display = "none";
+  document.getElementById("image-8-data-Medium").style.display = "block";
+});
+Mimg9details.addEventListener("click", () => {
+  document.getElementById("head-Easy-M").style.display = "none";
+  document.getElementById("image-9-data-Medium").style.display = "block";
+});
+Mimg10details.addEventListener("click", () => {
+  document.getElementById("head-Easy-M").style.display = "none";
+  document.getElementById("image-10-data-Medium").style.display = "block";
+});
+Mimg11details.addEventListener("click", () => {
+  document.getElementById("head-Easy-M").style.display = "none";
+  document.getElementById("image-11-data-Medium").style.display = "block";
+});
+
 
 document.getElementById("all-images-M").innerHTML = selectedMediumhtml;
 
@@ -140,6 +183,11 @@ const Himg1details = document.getElementById("imag-0-H");
 const Himg2details = document.getElementById("imag-1-H");
 const Himg3details = document.getElementById("imag-2-H");
 const Himg4details = document.getElementById("imag-3-H");
+const Himg5details = document.getElementById("imag-4-H");
+const Himg6details = document.getElementById("imag-5-H");
+const Himg7details = document.getElementById("imag-6-H");
+const Himg8details = document.getElementById("imag-7-H");
+const Himg9details = document.getElementById("imag-8-H");
 
 Himg1details.addEventListener("click", () => {
  
@@ -160,6 +208,26 @@ Himg3details.addEventListener("click", () => {
 Himg4details.addEventListener("click", () => {
   document.getElementById("head-Easy-H").style.display = "none";
   document.getElementById("image-4-data-Hard").style.display = "block";
+});
+Himg5details.addEventListener("click", () => {
+  document.getElementById("head-Easy-H").style.display = "none";
+  document.getElementById("image-5-data-Hard").style.display = "block";
+});
+Himg6details.addEventListener("click", () => {
+  document.getElementById("head-Easy-H").style.display = "none";
+  document.getElementById("image-6-data-Hard").style.display = "block";
+});
+Himg7details.addEventListener("click", () => {
+  document.getElementById("head-Easy-H").style.display = "none";
+  document.getElementById("image-7-data-Hard").style.display = "block";
+});
+Himg8details.addEventListener("click", () => {
+  document.getElementById("head-Easy-H").style.display = "none";
+  document.getElementById("image-8-data-Hard").style.display = "block";
+});
+Himg9details.addEventListener("click", () => {
+  document.getElementById("head-Easy-H").style.display = "none";
+  document.getElementById("image-9-data-Hard").style.display = "block";
 });
 
 document.getElementById("all-images-H").innerHTML = selectedHardhtml;
@@ -255,16 +323,29 @@ getNextQ(Eimg1, "img1Q");
 getNextQ(Eimg2, "img2Q");
 getNextQ(Eimg3, "img3Q");
 getNextQ(Eimg4, "img4Q");
+getNextQ(Eimg5, "img5Q");
 
 getNextQ(Mimg1, "img1Q-m");
 getNextQ(Mimg2, "img2Q-m");
 getNextQ(Mimg3, "img3Q-m");
 getNextQ(Mimg4, "img4Q-m");
+getNextQ(Mimg5, "img5Q-m");
+getNextQ(Mimg6, "img6Q-m");
+getNextQ(Mimg7, "img7Q-m");
+getNextQ(Mimg8, "img8Q-m");
+getNextQ(Mimg9, "img9Q-m");
+getNextQ(Mimg10, "img10Q-m");
+getNextQ(Mimg11, "img11Q-m");
 
 getNextQ(Himg1, "img1Q-h");
 getNextQ(Himg2, "img2Q-h");
 getNextQ(Himg3, "img3Q-h");
 getNextQ(Himg4, "img4Q-h");
+getNextQ(Himg5, "img5Q-h");
+getNextQ(Himg6, "img6Q-h");
+getNextQ(Himg7, "img7Q-h");
+getNextQ(Himg8, "img8Q-h");
+getNextQ(Himg9, "img9Q-h");
 
 // Setup back button logic
 function setupBackButton(backId, headId) {

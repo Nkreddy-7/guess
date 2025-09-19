@@ -17,18 +17,20 @@ Eimg.forEach((ele,index)=>{
 export let selectedhtml = '';
 Eimg.forEach((ele,index) =>{
       selectedhtml += `<div class="selected-image" id="image-${index + 1}-data">
-               <div class="all-imgs">
-                <div><img src="${ele.img}.jpg" id=" i${index + 1}"></div>
-                <div>
+    <div class="all-imgs">
+        <div><img src="${ele.img}.jpg" id=" i${index + 1}"></div>
+        <div class="Q-data-head">
+            <div class="Q-head">
                 <h5>Questions</h5>
                 <div class="Questions">
                     <div class="question-1" id="img${index + 1}Q">
                     </div>
                     <div class="final-score"></div>
                 </div>
-                </div>
-                </div>
-            </div>`;
+            </div>
+        </div>
+    </div>
+</div>`;
 })
 
 /*Questions data*/
