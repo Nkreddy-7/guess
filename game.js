@@ -304,7 +304,7 @@ export function getNextQ(imagedata, containerId) {
           localStorage.setItem("coins", coins);
           setTimeout(() => {
             nextQuestion(); // auto move to next
-          }, 2000);
+          }, 1000);
         } else {
           opt.style.background = "lightcoral";
           result.textContent = "❌ Wrong, try again!";
