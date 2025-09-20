@@ -6,14 +6,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>Document</title>
+    <title>Image quiz</title>
+    <link rel="icon"  href="icon1.ico">
     <link rel="stylesheet" href="game.css">
 
 </head>
 
 <body>
-    <section class="open-page">
 
+    <div class="Home-button" id="Home-button">
+        <button id="homeBtn" style="border: block;">🏠</button>
+    </div>
+    <div class="coins">💰 Coins: <span id="coinBox">0</span></div>
+    <section class="open-page">
+        <audio id="audio"  autoplay loop hidden>
+            <source src="plays.mp3" type="audio/mpeg" >
+        </audio>
         <div class="level" id="level">
             <div class="level-name" id="Eclick"> Easy</div>
             <div class="level-name" id="Mclick">Medium</div>
@@ -24,6 +32,7 @@
 
 
     </section>
+    
 
     <section id="Easylevel">
 
@@ -44,7 +53,7 @@
 
     </section>
     <section id="Mediumlevel">
-        <button id="homeBtn" style="border: block;">🏠</button>
+        
 
         <div class="head-easy" id="head-Easy-M">
             <div class="nav">
@@ -62,7 +71,7 @@
 
     </section>
     <section id="Hardlevel">
-        <button id="homeBtn">🏠</button>
+       
 
         <div class="head-easy" id="head-Easy-H">
             <div class="nav">
@@ -80,9 +89,7 @@
 
 
     </section>
-    <audio id="audio" controls autoplay loop style="display:none;">
-        <source src="play.mp3" type="audio/mpeg" loop>
-    </audio>
+    
 
 
     <script type="module" src="game.js"></script>

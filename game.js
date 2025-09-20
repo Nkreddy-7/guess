@@ -38,7 +38,9 @@ Hard.addEventListener("click", () => {
   MediumLevel.style.display = "none";
   HardLevel.style.display = "block";
 });
-console.log("naveem")
+
+
+/*coins loader*/
 
 
 /*easy,Medium,hard section code for image container*/
@@ -240,15 +242,24 @@ document.getElementById("all-images-H").innerHTML = selectedHardhtml;
 
 // Global coins variable
 let coins = 0;
-
-// Update all coin boxes (Easy, Medium, Hard)
-function updateCoins() {
-  document
-    .querySelectorAll("#coinBox, #coinBox-M, #coinBox-H")
-    .forEach((el) => {
-      if (el) el.textContent = coins;
-    });
+// Restore coins from localStorage
+let savedCoins = localStorage.getItem("coins");
+if (savedCoins !== null) {
+  coins = parseInt(savedCoins, 10);
 }
+updateCoins();
+function updateCoins() {
+  const coinEl = document.getElementById("coinBox");
+  if (coinEl) coinEl.textContent = coins;
+}
+
+const homeBtn = document.getElementById("homeBtn");
+homeBtn.addEventListener("click", () => {
+  localStorage.setItem("coins", coins); // save coins
+  location.reload(); // restart game
+});
+// Update all coin boxes (Easy, Medium, Hard)
+
 
 // Quiz function
 export function getNextQ(imagedata, containerId) {
@@ -290,15 +301,16 @@ export function getNextQ(imagedata, containerId) {
           score++;
           coins++;
           updateCoins();
-
+          localStorage.setItem("coins", coins);
           setTimeout(() => {
             nextQuestion(); // auto move to next
-          }, 1000);
+          }, 2000);
         } else {
           opt.style.background = "lightcoral";
           result.textContent = "❌ Wrong, try again!";
           coins--;
           updateCoins();
+          localStorage.setItem("coins", coins);
         }
       });
     });
@@ -347,6 +359,7 @@ getNextQ(Himg7, "img7Q-h");
 getNextQ(Himg8, "img8Q-h");
 getNextQ(Himg9, "img9Q-h");
 
+
 // Setup back button logic
 function setupBackButton(backId, headId) {
   const backBtn = document.getElementById(backId);
@@ -371,6 +384,12 @@ setupBackButton("backSelect-E", "head-Easy");
 setupBackButton("backSelect-M", "head-Easy-M");
 setupBackButton("backSelect-H", "head-Easy-H");
 
+
+
+
+console.log(home);
+
+console.log("naveem")
 
 
 
