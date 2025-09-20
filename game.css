@@ -291,6 +291,8 @@ body{
     .level {
         gap: 30px;
         padding: 30px 0;
+       
+        padding-bottom: 190px;
     }
     .level-name {
         width: 160px;
@@ -384,5 +386,6 @@ body{
         gap: 20px;
         padding: 10px;
         width: fit-content;
+        padding-bottom: 40px ;
     }
 }
