@@ -3,8 +3,25 @@ import { Easyimghtml,selectedhtml, Eimg1,Eimg2,Eimg3,Eimg4,Eimg5} from "./script
 import {Mediumimghtml,selectedMediumhtml,Mimg1,Mimg2,Mimg3,Mimg4,Mimg5,Mimg6,Mimg7,Mimg8,Mimg9,Mimg10,Mimg11} from "./scripts/Medium.js";
 import { Hardimghtml,selectedHardhtml,Himg1,Himg2,Himg3,Himg4,Himg5,Himg6,Himg7,Himg8,Himg9 } from "./scripts/Hard.js";
 
-console.log(Eimg1)
+
 console.log(Mediumimghtml)
+console.log(selectedhtml)
+/*play music button*/
+const audio = document.getElementById("audio");
+const playBtn = document.getElementById("playBtn");
+const stopBtn = document.getElementById("stopBtn");
+playBtn.addEventListener("click", () => {
+  audio.play();
+  playBtn.style.display = "none";
+  stopBtn.style.display = "block";
+});
+
+stopBtn.addEventListener("click", () => {
+  audio.pause();
+  stopBtn.style.display = "none";
+  playBtn.style.display = "block";
+});
+
 
 /*calling sections*/
 const Easy = document.getElementById("Eclick");
@@ -15,6 +32,10 @@ const level=document.getElementById("level")
 const EasyLevel = document.getElementById("Easylevel");
 const MediumLevel = document.getElementById("Mediumlevel");
 const HardLevel = document.getElementById("Hardlevel");
+
+//back button
+
+
 
 Easy.addEventListener("click",()=>{
    level.style.display="none";
@@ -40,7 +61,7 @@ Hard.addEventListener("click", () => {
 });
 
 
-/*coins loader*/
+
 
 
 /*easy,Medium,hard section code for image container*/
@@ -49,8 +70,7 @@ document.getElementById("image-container-e").innerHTML =Easyimghtml;
 document.getElementById("image-container-m").innerHTML = Mediumimghtml;
 document.getElementById("image-container-h").innerHTML = Hardimghtml;
 
-console.log("Easyimghtml")
-console.log(selectedhtml);
+
 /*Easy level code*/
 
 
@@ -107,7 +127,7 @@ img5details.addEventListener("click", () => {
   document.getElementById("image-5-data").style.display = "block";
 });
 
-/*Selected img html*/
+
 document.getElementById("all-images").innerHTML=selectedhtml;
 
 
@@ -234,15 +254,34 @@ Himg9details.addEventListener("click", () => {
 
 document.getElementById("all-images-H").innerHTML = selectedHardhtml;
 
+//back function
+for(let i=1;i<=5;i++){
+const backBtnE1 = document.getElementById(`backBtn-E-${i}`);
+backBtnE1.addEventListener("click",()=>{
+    document.getElementById("image-"+i+"-data").style.display = "none";
+    document.getElementById("head-Easy").style.display="block";
+})};
 
+for(let i=1;i<=5;i++){
+const backBtnE1E = document.getElementById(`backBtn-M-${i}`);
+backBtnE1E.addEventListener("click",()=>{
+    document.getElementById("image-" + i+ "-data-Medium").style.display =
+      "none";
+    document.getElementById("head-Easy-M").style.display="block";
+})};
 
-
+for(let i=1;i<=5;i++){
+const backBtnE1H = document.getElementById(`backBtn-H-${i}`);
+backBtnE1H.addEventListener("click",()=>{
+    document.getElementById("image-"+i+"-data-Hard").style.display = "none";
+    document.getElementById("head-Easy-H").style.display="block";
+})};
 /*Questions html*/
 
 
-// Global coins variable
+//  coins function
 let coins = 0;
-// Restore coins from localStorage
+
 let savedCoins = localStorage.getItem("coins");
 if (savedCoins !== null) {
   coins = parseInt(savedCoins, 10);
@@ -281,12 +320,12 @@ export function getNextQ(imagedata, containerId) {
         <div class="result">Choose an answer</div>
       </div>
     `;
-     
+   /*  
   const parentSection = container.closest("section");
   if (parentSection) {
     const backBtn = parentSection.querySelector("button[id^='backSelect']");
     if (backBtn) backBtn.style.display = "inline-block";
-  }
+  }*/
 
     const options = container.querySelectorAll(".option");
     const result = container.querySelector(".result");
@@ -359,7 +398,7 @@ getNextQ(Himg7, "img7Q-h");
 getNextQ(Himg8, "img8Q-h");
 getNextQ(Himg9, "img9Q-h");
 
-
+/*
 // Setup back button logic
 function setupBackButton(backId, headId) {
   const backBtn = document.getElementById(backId);
@@ -377,8 +416,8 @@ function setupBackButton(backId, headId) {
     // hide back button again
     backBtn.style.display = "none";
   });
-}
-
+}*/
+/*
 // apply to all levels
 setupBackButton("backSelect-E", "head-Easy");
 setupBackButton("backSelect-M", "head-Easy-M");
@@ -390,7 +429,7 @@ setupBackButton("backSelect-H", "head-Easy-H");
 console.log(home);
 
 console.log("naveem")
-
+*/
 
 
 /*function for Each image Questions and option generation
