@@ -1,11 +1,9 @@
-import { Easyimghtml,selectedhtml, Eimg1,Eimg2,Eimg3,Eimg4,Eimg5} from "./scripts/Easy.js";
+import {Eimg, Easyimghtml,selectedhtml, Eimg1,Eimg2,Eimg3,Eimg4,Eimg5} from "./scripts/Easy.js";
 
-import {Mediumimghtml,selectedMediumhtml,Mimg1,Mimg2,Mimg3,Mimg4,Mimg5,Mimg6,Mimg7,Mimg8,Mimg9,Mimg10,Mimg11} from "./scripts/Medium.js";
-import { Hardimghtml,selectedHardhtml,Himg1,Himg2,Himg3,Himg4,Himg5,Himg6,Himg7,Himg8,Himg9 } from "./scripts/Hard.js";
+import {Mimg,Mediumimghtml,selectedMediumhtml,Mimg1,Mimg2,Mimg3,Mimg4,Mimg5,Mimg6,Mimg7,Mimg8,Mimg9,Mimg10,Mimg11} from "./scripts/Medium.js";
+import {Himg, Hardimghtml,selectedHardhtml,Himg1,Himg2,Himg3,Himg4,Himg5,Himg6,Himg7,Himg8,Himg9 } from "./scripts/Hard.js";
 
 
-console.log(Mediumimghtml)
-console.log(selectedhtml)
 /*play music button*/
 const audio = document.getElementById("audio");
 const playBtn = document.getElementById("playBtn");
@@ -94,6 +92,13 @@ images.forEach((img) => {
 });
 
 */
+
+document.getElementById("homeBtn").addEventListener("click",()=>{
+  level.style.display="flex";
+  EasyLevel.style.display = "none";
+  MediumLevel.style.display = "none";
+  HardLevel.style.display = "none";
+});
 /*adding event listners for every image when clicks it open that imAGE  Easy section*/
 
 const img1details = document.getElementById("imag-0");
@@ -255,14 +260,14 @@ Himg9details.addEventListener("click", () => {
 document.getElementById("all-images-H").innerHTML = selectedHardhtml;
 
 //back function
-for(let i=1;i<=5;i++){
+for(let i=1;i<=Eimg.length;i++){
 const backBtnE1 = document.getElementById(`backBtn-E-${i}`);
 backBtnE1.addEventListener("click",()=>{
     document.getElementById("image-"+i+"-data").style.display = "none";
     document.getElementById("head-Easy").style.display="block";
 })};
 
-for(let i=1;i<=5;i++){
+for(let i=1;i<=Mimg.length;i++){
 const backBtnE1E = document.getElementById(`backBtn-M-${i}`);
 backBtnE1E.addEventListener("click",()=>{
     document.getElementById("image-" + i+ "-data-Medium").style.display =
@@ -270,7 +275,7 @@ backBtnE1E.addEventListener("click",()=>{
     document.getElementById("head-Easy-M").style.display="block";
 })};
 
-for(let i=1;i<=5;i++){
+for(let i=1;i<=Himg.length;i++){
 const backBtnE1H = document.getElementById(`backBtn-H-${i}`);
 backBtnE1H.addEventListener("click",()=>{
     document.getElementById("image-"+i+"-data-Hard").style.display = "none";
@@ -292,11 +297,7 @@ function updateCoins() {
   if (coinEl) coinEl.textContent = coins;
 }
 
-const homeBtn = document.getElementById("homeBtn");
-homeBtn.addEventListener("click", () => {
-  localStorage.setItem("coins", coins); // save coins
-  location.reload(); // restart game
-});
+
 // Update all coin boxes (Easy, Medium, Hard)
 
 

@@ -1,4 +1,4 @@
-const Himg = [
+export const Himg = [
   { img: "Hardimg/1" },
   { img: "Hardimg/2" },
   { img: "Hardimg/3" },

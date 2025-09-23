@@ -1,5 +1,5 @@
 /*data for image generation*/
-const Eimg = [
+export const Eimg = [
   { img: "Easyimg/1" },
   { img: "Easyimg/2" },
   { img: "Easyimg/3" },

@@ -1,4 +1,4 @@
-const Mimg = [
+export const Mimg = [
   { img: "Mediumimg/1" },
   { img: "Mediumimg/2" },
   { img: "Mediumimg/3" },
